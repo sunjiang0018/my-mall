@@ -12,7 +12,7 @@ export default new VueRouter({
   routes: [
     {
       path: "",
-      redirect: "/home 
+      redirect: "/home"
     },
     {
       path: "/home",
