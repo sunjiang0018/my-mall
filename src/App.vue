@@ -17,4 +17,8 @@ export default {
 
 <style>
 @import 'assets/css/base.css';
+
+body{
+  background-color: #eee;
+}
 </style>

@@ -1,49 +1,50 @@
 <template>
-  <div>
+  <div class="home">
     <nav-bar class="home-nav">
       购物街
     </nav-bar>
+    <home-swiper :list="banners" />
 
-    <swiper>
-      <swiper-item v-for="(item, index) in banners" :key="index">
-        <a :href="item.link">
-          <img :src="item.image">
-        </a>
-        
-      </swiper-item>
-        </swiper>
+    <recommend :list="recommends"/>
+    
   </div>
 </template>
 
 <script>
 import NavBar from 'components/common/navbar/NavBar'
+import HomeSwiper from './childComps/HomeSwiper'
+import Recommend from './childComps/Recommend'
+
 import { getHomeMultidata } from 'network/home'
-import {Swiper, SwiperItem} from 'components/common/swiper/index'
 
 export default {
   async created () {
     let data = await getHomeMultidata();
     this.banners = data.data.banner.list;
-    this.recommnds = data.data.recommend.list;
+    this.recommends = data.data.recommend.list;
   },
   data () {
     return {
       banners: [],
-      recommnds: []
+      recommends: []
     }
   },
   components: {
     NavBar,
-    Swiper,
-    SwiperItem
+    HomeSwiper,
+    Recommend
   }
 }
 </script>
 
+    Recommend
 <style>
 .home-nav {
   color: white;
   font-weight: bold;
   background-color: var(--color-tint);
+}
+.home{
+  background-color: #eee;
 }
 </style>
