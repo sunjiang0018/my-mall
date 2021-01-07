@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  props:['bgColor']
+  props: ['bgColor']
 }
 </script>
 

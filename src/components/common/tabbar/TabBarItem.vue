@@ -7,28 +7,28 @@
 </template>
 
 <script>
-	export default {
-		name: "TabBarItem",
-    props: {
-			link: {
-				type: String,
-        required: true
-      }
-    },
-    computed: {
-			isActive() {
-				return this.$route.path.indexOf(this.link) !== -1
-      },
-      activeStyle() {
-				return this.isActive ? {'color': 'red'} : {}
-      }
-    },
-    methods: {
-			itemClick() {
-				this.$router.replace(this.link)
-      }
+export default {
+  name: 'TabBarItem',
+  props: {
+    link: {
+      type: String,
+      required: true
     }
-	}
+  },
+  computed: {
+    isActive () {
+      return this.$route.path.indexOf(this.link) !== -1
+    },
+    activeStyle () {
+      return this.isActive ? { color: 'red' } : {}
+    }
+  },
+  methods: {
+    itemClick () {
+      this.$router.replace(this.link)
+    }
+  }
+}
 </script>
 
 <style scoped>

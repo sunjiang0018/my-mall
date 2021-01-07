@@ -21,7 +21,7 @@ export default {
     list: {
       type: Array,
       default () {
-        return [];
+        return []
       }
     }
   }

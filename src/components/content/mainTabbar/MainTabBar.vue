@@ -23,17 +23,17 @@
   </tab-bar>
 </template>
 
-  <script>
-    import TabBar from 'common/tabbar/TabBar'
-    import TabBarItem from 'common/tabbar/TabBarItem'
+<script>
+import TabBar from 'common/tabbar/TabBar'
+import TabBarItem from 'common/tabbar/TabBarItem'
 
-    export default {
-      name: "MainTabBar",
-      components: {
-        TabBar, TabBarItem
-      }
-    }
-  </script>
+export default {
+  name: 'MainTabBar',
+  components: {
+    TabBar, TabBarItem
+  }
+}
+</script>
 
 <style scoped>
 
